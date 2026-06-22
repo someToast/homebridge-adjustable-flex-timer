@@ -37,6 +37,9 @@ You may set the "sensor" variable to any of the following:
  ## Brightness
  The brightness variable specifies a value for the switch to start on, if you toggle it on it will automatically jump to this number irregardless of what it was on previously.
 
+ ## Pausable
+ When `pausable` is `false`, turning the switch on normally resets brightness to the configured default. However, if you (or Siri) explicitly set a brightness value within 2 seconds before turning the switch on, that value is honored instead of being overridden by the default — this avoids a race where setting brightness and power together gets clobbered back to the default.
+
  ## Delay Unit
  Delay unit can be set to any of the following and specifies how long will each % take.
  - "s" Second

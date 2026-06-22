@@ -233,6 +233,7 @@ DummyTimer.prototype._setBrightness = function (brightness, callback) {
   }
 
   this.brightness = brightness;
+  this._lastBrightnessSetAt = Date.now();
   //   this.storage.setItemSync(this.brightnessStorageKey, brightness);
   this.platform.context.cachedBrightness = brightness;
   callback();
@@ -249,8 +250,11 @@ DummyTimer.prototype._setOn = function (on, callback) {
     if (on) {
 
       if (!this.config.pausable) {
-        this.timerRepresentative.setCharacteristic(this.Characteristic.Brightness, this.defBrightness);
-        this.brightness = this.defBrightness
+        var recentlySet = this._lastBrightnessSetAt && (Date.now() - this._lastBrightnessSetAt) < 2000;
+        if (!recentlySet) {
+          this.brightness = this.defBrightness
+        }
+        this.timerRepresentative.setCharacteristic(this.Characteristic.Brightness, this.brightness);
       } else {
         this.timerRepresentative.setCharacteristic(this.Characteristic.Brightness, this.brightness);
         this.brightness = this.brightness
