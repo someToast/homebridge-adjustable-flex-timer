@@ -260,6 +260,7 @@ DummyTimer.prototype._setOn = function (on, callback) {
         this.brightness = this.brightness
       }
 
+      clearInterval(this.timer);
       this.timer = setInterval(function () {
         if (this.brightness > 1) {
           this.brightness = this.brightness - 1
