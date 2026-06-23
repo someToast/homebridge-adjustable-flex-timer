@@ -1,16 +1,16 @@
 {
-  "name": "@theproductroadmap/homebridge-adjustable-timer",
-  "version": "2.1.9",
-  "description": "Dummy switches for Homebridge: https://github.com/mksvrcek/homebridge-adjustable-timer",
+  "name": "homebridge-adjustable-flex-timer",
+  "version": "2.2.0",
+  "description": "Dummy switches for Homebridge: https://github.com/someToast/homebridge-adjustable-flex-timer",
   "license": "ISC",
-  "author": "mksvrcek",
-  "homepage": "https://theproductroadmap.co",
+  "author": "someToast",
+  "homepage": "https://github.com/someToast/homebridge-adjustable-flex-timer",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mksvrcek/homebridge-adjustable-timer.git"
+    "url": "git://github.com/someToast/homebridge-adjustable-flex-timer.git"
   },
   "bugs": {
-    "url": "https://github.com/mksvrcek/homebridge-adjustable-timer/issues"
+    "url": "https://github.com/someToast/homebridge-adjustable-flex-timer/issues"
   },
   "keywords": [
     "timer",
