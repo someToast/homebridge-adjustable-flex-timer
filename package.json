@@ -3,7 +3,10 @@
   "version": "2.2.0",
   "description": "Dummy switches for Homebridge: https://github.com/someToast/homebridge-adjustable-flex-timer",
   "license": "ISC",
-  "author": "someToast",
+  "author": {
+    "name": "someToast",
+    "url": "https://github.com/someToast"
+  },
   "homepage": "https://github.com/someToast/homebridge-adjustable-flex-timer",
   "repository": {
     "type": "git",
